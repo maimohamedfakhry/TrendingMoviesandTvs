@@ -1,0 +1,53 @@
+<div class="home">
+  <div class="container text-white">
+    <div class="row">
+      <div class="col-md-4 d-flex align-items-center justify-content-center">
+        <div>
+          <h4>---------------------------</h4>
+          <h2 class="text-center">
+            Trending Movies
+          </h2>
+          <h2 class="my-3 text-center">Right Now</h2>
+          <h4>---------------------------</h4>
+        </div>
+      </div>
+      <!--------------------------------------------------------->
+      <div *ngFor="let movie of movieTrending" class="col-md-2">
+        <a [routerLink]="['/moviedetails', movie.id]">
+          <div class="movie py-5 position-relative">
+            <img [src]="imgPrefix + movie.poster_path" class="w-100" />
+            <h5 class="m-3">{{ movie.title }}</h5>
+            <h6 class="bg-info p-1 d-inline-block position-absolute">
+              {{ movie.vote_average }}
+            </h6>
+          </div></a
+        >
+      </div>
+    </div>
+    <!------------------------------------------------------------------>
+    <div class="row">
+      <div class="col-md-4 d-flex align-items-center justify-content-center">
+        <div>
+          <h4>---------------------------</h4>
+          <h2 class="text-center">
+            Trending TV
+          </h2>
+          <h2 class="my-3 text-center">Right Now</h2>
+          <h4>---------------------------</h4>
+        </div>
+      </div>
+      <!--------------------------------------------------------->
+      <div *ngFor="let tv of tvTrending" class="col-md-2">
+        <a [routerLink]="['/tvdetails', tv.id]"
+          ><div class="tv py-5 position-relative">
+            <img [src]="imgPrefix + tv.poster_path" class="w-100" />
+            <h5 class="m-3">{{ tv.name }}</h5>
+            <h6 class="bg-info p-1 d-inline-block position-absolute">
+              {{ tv.vote_average }}
+            </h6>
+          </div></a
+        >
+      </div>
+    </div>
+  </div>
+</div>
