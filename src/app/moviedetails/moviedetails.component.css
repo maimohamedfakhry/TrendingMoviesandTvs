@@ -7,3 +7,6 @@ h2,
 p {
   font-family: "Cantora One", sans-serif;
 }
+.container {
+  padding-top: 100px;
+}

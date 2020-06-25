@@ -9,8 +9,11 @@ import { RegisterComponent } from './register/register.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MoviedetailsComponent } from './moviedetails/moviedetails.component';
 import { TvdetailsComponent } from './tvdetails/tvdetails.component';
+import { LoginComponent } from './login/login.component';
+import { NavbarComponent } from './navbar/navbar.component';
+import { AboutComponent } from './about/about.component';
 @NgModule({
-  declarations: [AppComponent, HomeComponent, RegisterComponent, MoviedetailsComponent, TvdetailsComponent],
+  declarations: [AppComponent, HomeComponent, RegisterComponent, MoviedetailsComponent, TvdetailsComponent, LoginComponent, NavbarComponent, AboutComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
